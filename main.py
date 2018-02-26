@@ -1,7 +1,9 @@
 from convention import Convention
-import urllib.request
+from urllib.request import Request, urlopen
+from urllib.error import URLError
 from bs4 import BeautifulSoup
 import json
+import collections
 
 
 def dict_compare(d1, d2):
@@ -16,14 +18,15 @@ def dict_compare(d1, d2):
 
 
 def print_dict(multimap):
-    for key, vals in multimap.items():
+    ordered = collections.OrderedDict(sorted(multimap.items()))
+    for key, vals in ordered.items():
         print(key)
         if not vals:
             print('\tNone')
         for val in vals:
             print('\t' + val + ' (' + conventions[val].date + ')')
         print('')
-    print('----------')
+    print('---------------------------')
 
 
 def exception(convention_name, actor_name):
@@ -41,12 +44,23 @@ def get_name_from_tag(tag):
 
 
 def get_html(url):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'})
-    with urllib.request.urlopen(req) as response:
-        return response.read()
+    req = Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'})
+    try:
+        response = urlopen(req)
+    except URLError as e:
+        print('The server at ' + url + ' couldn\'t fulfill the request.')
+        if hasattr(e, 'reason'):
+            print('Reason: ', e.reason)
+        if hasattr(e, 'code'):
+            print('Error code: ', e.code)
+        print('---------------------------')
+    else:
+        return response
 
 
 def parse_html(html, selector, convention_name):
+    if not html:
+        return
     temp_actors = set([])
     soup = BeautifulSoup(html, HTML_PARSER)
     for tag in soup.select(selector):
@@ -124,7 +138,9 @@ conventions['Wizard World Austin'] =        Convention('https://wizardworld.com/
 
 conventionToActor = {}
 for convention_name, convention in conventions.items():
-    conventionToActor[convention_name] = list(parse_html(get_html(convention.url), convention.selector, convention_name))
+    actorSet = parse_html(get_html(convention.url), convention.selector, convention_name)
+    if actorSet:
+        conventionToActor[convention_name] = list(actorSet)
 
 actorToConvention = {}
 for convention, actors in conventionToActor.items():
