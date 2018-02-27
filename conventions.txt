@@ -1,49 +1,44 @@
-Planet Comicon,             http://planetcomicon.com/celebrity/,                              02-16-2018, h1
-Emerald City Comic Con,     https://www.emeraldcitycomiccon.com/Guests/Entertainment-Guests/, 03-01-2018, div.guest-name
-Wizard World Cleveland,     https://wizardworld.com/comiccon/cleveland,                       03-02-2018, div.overview h3
-Lexington Comic Con,        http://lexingtoncomiccon.com/guests.html,                         03-09-2018, div.title h2
-Toronto Comic Con,          http://comicontoronto.com/guests/,                                03-16-2018, h2.category-guest-title a
-Awesome Con,                http://awesome-con.com/guestsdc/,                                 03-30-2018, article.celebrity-guests h4.fusion-rollover-title a
-Indiana Comic Con,          https://indianacomiccon.com/,                                     03-30-2018, div.entry-content img
-C2E2,                       https://www.c2e2.com/Guests/Entertainment-Guests/,                04-06-2018, div.guest-info h3
-Fan Expo Dallas,            http://fanexpodallas.com/guests/,                                 04-06-2018, h2.category-guest-title a
-Wizard World Portland,      https://wizardworld.com/comiccon/portland,                        04-13-2018, div.overview h3
-Calgary Expo,               https://calgaryexpo.com/guests/media-guests/,                     04-26-2018, div.name
-Conque,                     http://conque.mx/invitados.php,                                   05-04-2018, div.caption-invited h3
-Fan Expo Regina,            http://fanexporegina.com/guests/,                                 05-05-2018, h2.category-guest-title a
-Wizard World Philly,        https://wizardworld.com/comiccon/philadelphia,                    05-17-2018, div.overview h3
-Motor City Comic Con,       http://www.motorcitycomiccon.com/category/media-guests/,          05-18-2018, h2.entry-title a
-Megacon Orlando,            http://megaconorlando.com/guests/,                                05-24-2018, h2.category-guest-title a
-Comic Palooza,              https://www.comicpalooza.com/guests/2018-guests/,                 05-25-2018, div.guestItem h2
-Wizard World Des Moines,    https://wizardworld.com/comiccon/des-moines,                      06-01-2018, div.overview h3
-Wizard World Columbus,      https://wizardworld.com/comiccon/columbus,                        06-08-2018, div.overview h3
-New Jersey Comic Expo,      http://newjerseycomicexpo.com/guests/,                            06-10-2018, p.guestName
-Denver Comic Con,           https://denvercomiccon.com/guests/,                               06-15-2018, span.et_portfolio_image img
-Florida Supercon,           http://floridasupercon.com/all-guests-florida-supercon/,          07-12-2018, h3.entry-title a
-Wizard World Boise,         https://wizardworld.com/comiccon/boise,                           07-13-2018, div.overview h3
-London Film and Comic Con,  https://www.londonfilmandcomiccon.com/index.php/allguests,        07-27-2018, h3.aidanews2_title a
-Tampa Bay Comic Con,        https://tampabaycomiccon.com/,                                    08-03-2018, div.entry-content img
-Boston Comic Con,           http://bostoncomiccon.com/celebrity-guests/,                      08-10-2018, div.cg-name-in-headline a
-Wizard World Chicago,       https://wizardworld.com/comiccon/chicago,                         08-23-2018, div.overview h3
-Fan Expo Canada,            https://www.fanexpocanada.com/en/guests/celebrities.html,         08-30-2018, div.callToActionPara b
-Dragon Con,                 http://www.dragoncon.org/?q=featured_list,                        08-30-2018, td a
-Salt Lake Comic Con,        https://www.fanxsaltlake.com/guests/,                             09-06-2018, h3.team-member-name
-Wizard World Madison,       https://wizardworld.com/comiccon/madison,                         09-21-2018, div.overview h3
-Megacon Tampa Bay,          http://megacontampabay.com/guests/,                               09-21-2018, h2.category-guest-title a
-Baltimore Comic Con,        http://baltimorecomiccon.com/guests/,                             09-28-2018, ul li
-Dallas Fan Days,            http://dallasfandays.com/guests/,                                 10-19-2018, h2.category-guest-title a
-Wizard World Oklahoma City, https://wizardworld.com/comiccon/oklahoma-city-2018,              10-26-2018, div.overview h3
-LA Comic Con,               http://www.stanleeslacomiccon.com/guests/media-guests,            mm-dd-2018, h4.guest-title a
-Memphis Comic Expo,         http://www.memphiscomicexpo.com/guests/,                          mm-dd-2018, div.textwidget strong
-Fan Expo Vancouver,         http://fanexpovancouver.com/guests/,                              mm-dd-2018, h2.category-guest-title a
-Wizard World Montgomery,    https://wizardworld.com/comiccon/montgomery,                      mm-dd-2018, div.overview h3
-Wizard World Springfield,   https://wizardworld.com/comiccon/springfield,                     mm-dd-2018, div.overview h3
-Wizard World Biloxi,        https://wizardworld.com/comiccon/biloxi,                          mm-dd-2018, div.overview h3
-Wizard World Winston Salem, https://wizardworld.com/comiccon/winston-salem,                   mm-dd-2018, div.overview h3
-Wizard World Peoria,        https://wizardworld.com/comiccon/peoria,                          mm-dd-2018, div.overview h3
-Wizard World Austin,        https://wizardworld.com/comiccon/austin-2018,                     mm-dd-2018, div.overview h3
-
-# Edmonton Expo,            https://edmontonexpo.com/guests/media-guests/,                    09-21-2018, div.name
-# New York Comic Con,       http://www.newyorkcomiccon.com/Guests/,                           10-04-2018, 
-# Rhode Island Comic Con,   http://www.ricomiccon.com/guests,                                 11-02-2018, 
-# Eternal Con,              http://eternalcon.com/celebrity-guests/,                          06-16-2018, 
+Planet Comicon,             http://planetcomicon.com/celebrity/,                              02-16-2018, h1,
+Emerald City Comic Con,     https://www.emeraldcitycomiccon.com/Guests/Entertainment-Guests/, 03-01-2018, div.guest-name,
+Wizard World Cleveland,     https://wizardworld.com/comiccon/cleveland,                       03-02-2018, div.overview h3,
+Lexington Comic Con,        http://lexingtoncomiccon.com/guests.html,                         03-09-2018, div.title h2,
+Toronto Comic Con,          http://comicontoronto.com/guests/,                                03-16-2018, h2.category-guest-title a,
+Awesome Con,                http://awesome-con.com/guestsdc/,                                 03-30-2018, article.celebrity-guests h4.fusion-rollover-title a,
+Indiana Comic Con,          https://indianacomiccon.com/,                                     03-30-2018, div.entry-content img,
+C2E2,                       https://www.c2e2.com/Guests/Entertainment-Guests/,                04-06-2018, div.guest-info h3,
+Fan Expo Dallas,            http://fanexpodallas.com/guests/,                                 04-06-2018, h2.category-guest-title a,
+Wizard World Portland,      https://wizardworld.com/comiccon/portland,                        04-13-2018, div.overview h3,
+Calgary Expo,               https://calgaryexpo.com/guests/media-guests/,                     04-26-2018, div.name,
+Conque,                     http://conque.mx/invitados.php,                                   05-04-2018, div.caption-invited h3,
+Fan Expo Regina,            http://fanexporegina.com/guests/,                                 05-05-2018, h2.category-guest-title a,
+Wizard World Philly,        https://wizardworld.com/comiccon/philadelphia,                    05-17-2018, div.overview h3,
+Motor City Comic Con,       http://www.motorcitycomiccon.com/category/media-guests/,          05-18-2018, h2.entry-title a,
+Megacon Orlando,            http://megaconorlando.com/guests/,                                05-24-2018, h2.category-guest-title a,
+Comic Palooza,              https://www.comicpalooza.com/guests/2018-guests/,                 05-25-2018, div.guestItem h2,
+Wizard World Des Moines,    https://wizardworld.com/comiccon/des-moines,                      06-01-2018, div.overview h3,
+Wizard World Columbus,      https://wizardworld.com/comiccon/columbus,                        06-08-2018, div.overview h3,
+New Jersey Comic Expo,      http://newjerseycomicexpo.com/guests/,                            06-10-2018, p.guestName,
+Denver Comic Con,           https://denvercomiccon.com/guests/,                               06-15-2018, span.et_portfolio_image img,
+Florida Supercon,           http://floridasupercon.com/all-guests-florida-supercon/,          07-12-2018, h3.entry-title a,
+Wizard World Boise,         https://wizardworld.com/comiccon/boise,                           07-13-2018, div.overview h3,
+London Film and Comic Con,  https://www.londonfilmandcomiccon.com/index.php/allguests,        07-27-2018, h3.aidanews2_title a,
+Tampa Bay Comic Con,        https://tampabaycomiccon.com/,                                    08-03-2018, div.entry-content img,
+Boston Comic Con,           http://bostoncomiccon.com/celebrity-guests/,                      08-10-2018, div.cg-name-in-headline a,
+Wizard World Chicago,       https://wizardworld.com/comiccon/chicago,                         08-23-2018, div.overview h3,
+Fan Expo Canada,            https://www.fanexpocanada.com/en/guests/celebrities.html,         08-30-2018, div.callToActionPara b,
+Dragon Con,                 http://www.dragoncon.org/?q=featured_list,                        08-30-2018, td a,
+Salt Lake Comic Con,        https://www.fanxsaltlake.com/guests/,                             09-06-2018, h3.team-member-name,
+Wizard World Madison,       https://wizardworld.com/comiccon/madison,                         09-21-2018, div.overview h3,
+Megacon Tampa Bay,          http://megacontampabay.com/guests/,                               09-21-2018, h2.category-guest-title a,
+Baltimore Comic Con,        http://baltimorecomiccon.com/guests/,                             09-28-2018, ul li,
+Dallas Fan Days,            http://dallasfandays.com/guests/,                                 10-19-2018, h2.category-guest-title a,
+Wizard World Oklahoma City, https://wizardworld.com/comiccon/oklahoma-city-2018,              10-26-2018, div.overview h3,
+LA Comic Con,               http://www.stanleeslacomiccon.com/guests/media-guests,            mm-dd-2018, h4.guest-title a,
+Memphis Comic Expo,         http://www.memphiscomicexpo.com/guests/,                          mm-dd-2018, div.textwidget strong,
+Fan Expo Vancouver,         http://fanexpovancouver.com/guests/,                              mm-dd-2018, h2.category-guest-title a,
+Wizard World Montgomery,    https://wizardworld.com/comiccon/montgomery,                      mm-dd-2018, div.overview h3,
+Wizard World Springfield,   https://wizardworld.com/comiccon/springfield,                     mm-dd-2018, div.overview h3,
+Wizard World Biloxi,        https://wizardworld.com/comiccon/biloxi,                          mm-dd-2018, div.overview h3,
+Wizard World Winston Salem, https://wizardworld.com/comiccon/winston-salem,                   mm-dd-2018, div.overview h3,
+Wizard World Peoria,        https://wizardworld.com/comiccon/peoria,                          mm-dd-2018, div.overview h3,
+Wizard World Austin,        https://wizardworld.com/comiccon/austin-2018,                     mm-dd-2018, div.overview h3,
