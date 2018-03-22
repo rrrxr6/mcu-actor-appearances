@@ -2,6 +2,16 @@ from urllib.request import Request, urlopen
 from urllib.error import URLError
 from bs4 import BeautifulSoup
 import collections
+import sys
+
+
+class NullDevice:
+    def write(self, s):
+        pass
+
+
+def suppress_err():
+    sys.stderr = NullDevice()
 
 
 def dict_compare(d1, d2):
@@ -42,22 +52,24 @@ def get_name_from_tag(tag):
 
 
 def get_raw_text(url):
-    return get_html(url).read().decode(UTF_8)
+    html, error = get_html(url)
+    return html.read().decode(UTF_8)
 
 
 def get_html(url):
     req = Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'})
+    error = ''
+    response = ''
     try:
         response = urlopen(req)
     except URLError as e:
-        print('The server at ' + url + ' couldn\'t fulfill the request.')
+        error = 'The server at ' + url + ' couldn\'t fulfill the request.\n'
         if hasattr(e, 'reason'):
-            print('Reason: ', e.reason)
+            error = error + 'Reason: ' + e.reason + '\n'
         if hasattr(e, 'code'):
-            print('Error code: ', e.code)
-        print('---------------------------')
-    else:
-        return response
+            error = error + 'Error code: ' + str(e.code) + '\n'
+        error = error + '---------------------------\n'
+    return response, error
 
 
 def parse_html(html, selector, convention_name):
