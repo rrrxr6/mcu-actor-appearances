@@ -1,33 +1,45 @@
 from convention import Convention
-import utils
+from utils import *
+from pathlib import Path
 import json
+import sys
+import os
 
 
-with open('actorToConvention.txt', 'r') as file:
-    actorToConventionFromFile = json.load(file)
-
-convention_data = []
-for x in utils.get_raw_text('https://raw.githubusercontent.com/rrrxr6/mcu-actor-appearances/master/conventions.txt').split(','):
-    convention_data.append(x.strip())
+suppress_err()
+actorToConventionFromFile = dict()
+filename = os.path.join(os.path.dirname(__file__), 'actorToConvention.txt')
+if Path(filename).is_file():
+    with open(filename, 'r') as file:
+        actorToConventionFromFile = json.load(file)
 
 all_conventions = dict()
-for i in range(0, len(convention_data) - 1, 4):
-    all_conventions[convention_data[i]] = Convention(convention_data[i + 1], convention_data[i + 2], convention_data[i + 3])
-
-# Move to conventions.txt once guests are announced
-# conventions['Edmonton Expo'] =            Convention('https://edmontonexpo.com/guests/media-guests/',                     '09-21-2018', 'div.name')
-# conventions['New York Comic Con'] =       Convention('http://www.newyorkcomiccon.com/Guests/',                            '10-04-2018', '')
-# conventions['Rhode Island Comic Con'] =   Convention('http://www.ricomiccon.com/guests',                                  '11-02-2018', '')
-# conventions['Eternal Con'] =              Convention('http://eternalcon.com/celebrity-guests/',                           '06-16-2018', '')
-# conventions[''] =                         Convention('', '', '')
+convention_data = urlopen('https://raw.githubusercontent.com/rrrxr6/mcu-actor-appearances/master/conventions.txt')
+for byte_line in convention_data:
+    text_line = byte_line.decode('utf-8')
+    if text_line.startswith('#'):
+        continue
+    con = text_line.split(',')
+    all_conventions[con[0].strip()] = Convention(con[1].strip(), con[2].strip(), con[3].strip())
 
 conventionToActor = {}
+errors = ''
+
+sys.stdout.write('[%s]' % (' ' * len(all_conventions.keys())))
+sys.stdout.flush()
+sys.stdout.write('\b' * (len(all_conventions.keys()) + 1))
+
 for convention_name, convention in all_conventions.items():
-    actorSet = utils.parse_html(utils.get_html(convention.url), convention.selector, convention_name)
+    html, error = get_html(convention.url)
+    errors = errors + error
+    actorSet = parse_html(html, convention.selector, convention_name)
     if actorSet:
         conventionToActor[convention_name] = list(actorSet)
+    sys.stdout.write('#')
+    sys.stdout.flush()
 
-actorToConvention = {}
+sys.stdout.write("\n")
+actorToConvention = dict()
 for convention, actors in conventionToActor.items():
     for actor in actors:
         if actor in actorToConvention:
@@ -35,18 +47,19 @@ for convention, actors in conventionToActor.items():
         else:
             actorToConvention[actor] = [convention]
 
-utils.print_dict(actorToConvention, all_conventions)
+print_dict(actorToConvention, all_conventions)
 
-added, removed, modified, same = utils.dict_compare(actorToConvention, actorToConventionFromFile)
-print("Added: ", end='')
+added, removed, modified, same = dict_compare(actorToConvention, actorToConventionFromFile)
+print('Added: ', end='')
 print(added)
-print("Removed: ", end='')
+print('Removed: ', end='')
 print(removed)
-print("Modified: ", end='')
+print('Modified: ', end='')
 print(modified)
-print("Same: ", end='')
+print('Same: ', end='')
 print(same)
-
-with open('actorToConvention.txt', 'w') as file:
+print('---------------------------')
+print('Errors:')
+print(errors)
+with open(filename, 'w') as file:
     json.dump(actorToConvention, file)
-
