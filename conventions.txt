@@ -1,5 +1,6 @@
 Walker Stalker Portland,    http://walkerstalkercon.com/portland/guests/,                     01-05-2019, h5.person_name,
 Heroes Fan Fest Portland,   http://heroesfanfest.com/portland/guests/,                        01-05-2019, h5.person_name,
+Albuquerque Comic Con,      http://albuquerquecomiccon.com/2015-home/guest-listing/,          01-18-2019, h2.entry-title a,
 #Planet Comicon,             http://planetcomicon.com/celebrity/,                              02-16-2018, h1,
 #Emerald City Comic Con,     https://www.emeraldcitycomiccon.com/Guests/Entertainment-Guests/, 03-01-2018, div.guest-name,
 #Wizard World Cleveland,     https://wizardworld.com/comiccon/cleveland,                       03-02-2018, div.overview h3,
