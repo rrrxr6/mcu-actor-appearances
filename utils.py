@@ -77,7 +77,6 @@ def parse_html(html, selector, convention_name):
         return
     temp_actors = set([])
     soup = BeautifulSoup(html, HTML_PARSER)
-    # print(soup)
     for tag in soup.select(selector):
         actor_name = get_name_from_tag(tag)
         if actor_name in MCU_ACTORS and not exception(convention_name, actor_name):
