@@ -25,7 +25,7 @@ def dict_compare(d1, d2):
     return added, removed, modified, same
 
 
-def print_dict(actor_to_convention, all_conventions):
+def print_actors(actor_to_convention, all_conventions):
     ordered = collections.OrderedDict(sorted(actor_to_convention.items()))
     for actor, conventions in ordered.items():
         print(actor)
@@ -77,6 +77,7 @@ def parse_html(html, selector, convention_name):
         return
     temp_actors = set([])
     soup = BeautifulSoup(html, HTML_PARSER)
+    # print(soup)
     for tag in soup.select(selector):
         actor_name = get_name_from_tag(tag)
         if actor_name in MCU_ACTORS and not exception(convention_name, actor_name):
