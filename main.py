@@ -30,13 +30,13 @@ sys.stdout.flush()
 sys.stdout.write('\b' * (len(all_conventions.keys()) + 1))
 
 for convention_name, convention in all_conventions.items():
-        html, error = get_html(convention.url)
-        errors = errors + error
-        actorSet = parse_html(html, convention.selector, convention_name)
-        if actorSet:
-            conventionToActor[convention_name] = list(actorSet)
-        sys.stdout.write('#')
-        sys.stdout.flush()
+    html, error = get_html(convention.url)
+    errors = errors + error
+    actorSet = parse_html(html, convention.selector, convention_name)
+    if actorSet:
+        conventionToActor[convention_name] = list(actorSet)
+    sys.stdout.write('#')
+    sys.stdout.flush()
 
 sys.stdout.write("\n")
 
