@@ -1,17 +1,7 @@
 from urllib.request import Request, urlopen
-from urllib.error import URLError
 from bs4 import BeautifulSoup
 import collections
-import sys
-
-
-class NullDevice:
-    def write(self, s):
-        pass
-
-
-def suppress_err():
-    sys.stderr = NullDevice()
+# import sys
 
 
 def dict_compare(d1, d2):
@@ -25,16 +15,23 @@ def dict_compare(d1, d2):
     return added, removed, modified, same
 
 
-def print_actors(actor_to_convention, all_conventions):
+def print_conventions(convention_to_actor):
+    print('---------------------------')
+    for convention, actors in convention_to_actor.items():
+        print(convention.name + ' (' + convention.date + ')')
+        for actor in actors:
+            print('\t' + actor)
+        print('')
+
+
+def print_actors(actor_to_convention):
+    print('---------------------------')
     ordered = collections.OrderedDict(sorted(actor_to_convention.items()))
     for actor, conventions in ordered.items():
         print(actor)
-        if not conventions:
-            print('\tNone')
         for convention in conventions:
-            print('\t' + convention + ' (' + all_conventions[convention].date + ')')
+            print('\t' + convention.name + ' (' + convention.date + ')')
         print('')
-    print('---------------------------')
 
 
 def exception(convention_name, actor_name):
@@ -52,39 +49,50 @@ def get_name_from_tag(tag):
 
 
 def get_raw_text(url):
-    html, error = get_html(url)
-    return html.read().decode(UTF_8)
-
-
-def get_html(url):
     req = Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'})
-    error = ''
     response = ''
     try:
         response = urlopen(req)
-    except URLError as e:
-        error = 'The server at ' + url + ' couldn\'t fulfill the request.\n'
-        if hasattr(e, 'reason'):
-            error = error + 'Reason: ' + e.reason + '\n'
-        if hasattr(e, 'code'):
-            error = error + 'Error code: ' + str(e.code) + '\n'
-        error = error + '---------------------------\n'
-    return response, error
+    except:
+        # e = sys.exc_info()[0]
+        print('[ERROR] Failed to retrieve contents from ' + url)
+    if response:
+        return response.read().decode(UTF_8)
+    else:
+        return response
 
 
-def parse_html(html, selector, convention_name):
+def get_html(convention):
+    req = Request(convention.url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'})
+    try:
+        response = urlopen(req)
+    except:
+        # e = sys.exc_info()[0]
+        print('[ERROR] Failed to retrieve ' + convention.name + ' contents from ' + convention.url)
+        return ''
+    return response
+
+
+def parse_html(html, convention):
     if not html:
         return
     temp_actors = set([])
-    soup = BeautifulSoup(html, HTML_PARSER)
-    for tag in soup.select(selector):
+    try:
+        print('[INFO] Parsing HTML for ' + convention.name)
+        soup = BeautifulSoup(html, HTML_PARSER)
+    except:
+        print('[ERROR] Failed to parse HTML for ' + convention.name)
+        return ''
+
+    for tag in soup.select(convention.selector):
         actor_name = get_name_from_tag(tag)
-        if actor_name in MCU_ACTORS and not exception(convention_name, actor_name):
+        if actor_name in MCU_ACTORS and not exception(convention.name, actor_name):
             temp_actors.add(actor_name.title())
     return temp_actors
 
 
 UTF_8 = 'utf-8'
 HTML_PARSER = 'html.parser'
+print('[INFO] Downloading actor list')
 MCU_ACTORS = get_raw_text('https://raw.githubusercontent.com/rrrxr6/mcu-actor-appearances/master/actors.txt').split('\n')
 MCU_ACTORS.remove('')
