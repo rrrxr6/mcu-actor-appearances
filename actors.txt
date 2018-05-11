@@ -1,5 +1,6 @@
 anthony hopkins
 anthony mackie
+anthony russo
 benedict cumberbatch
 benedict wong
 benicio del toro
@@ -20,11 +21,13 @@ elizabeth olsen
 emily vancamp
 evangeline lilly
 frank grillo
+gwyneth paltrow
 hayley atwell
 idris elba
 james spader
 jeff goldblum
 jeremy renner
+joe russo
 josh brolin
 karen gillan
 karl urban
@@ -34,6 +37,8 @@ mads mikkelsen
 mark ruffalo
 michael rooker
 paul bettany
+paul rudd
+peter dinklage
 pom klementieff
 robert downey jr.
 samuel l. jackson
@@ -46,6 +51,9 @@ tessa thompson
 tilda swinton
 tom hiddleston
 tom holland
+tom vaughan-lawlor
+tom vaughan lawlor
 vin diesel
 william hurt
+winston duke
 zoe saldana
