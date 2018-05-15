@@ -56,7 +56,7 @@ London Film and Comic Con,  https://www.londonfilmandcomiccon.com/index.php/allg
 Raleigh Supercon,           https://raleighsupercon.com/guests/,                               07-27-2018, img.rt-img-responsive,
 Tampa Bay Comic Con,        https://tampabaycomiccon.com/,                                    08-03-2018, div.entry-content img,
 Wizard World Winston Salem, https://wizardworld.com/comiccon/winston-salem,                   08-03-2018, div.overview h3,
-Boston Comic Con,           http://bostoncomiccon.com/celebrity-guests/,                      08-10-2018, div.cg-name-in-headline a,
+Boston Comic Con,           https://register.growtix.com/people/embed?event_id=7057,          08-10-2018, div.gt-name a,
 Walker Stalker Orlando,     http://walkerstalkercon.com/orlando/guests/,                      08-11-2018, h5.person_name,
 Wizard World Chicago,       https://wizardworld.com/comiccon/chicago,                         08-23-2018, div.overview h3,
 Fan Expo Canada,            https://register.growtix.com/people/embed?event_id=7064,          08-30-2018, div.gt-name a,
