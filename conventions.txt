@@ -60,7 +60,7 @@ Raleigh Supercon,           https://raleighsupercon.com/guests/,                
 Tampa Bay Comic Con,        https://tampabaycomiccon.com/,                                    08-03-2018, div.entry-content img,
 Wizard World Winston Salem, https://wizardworld.com/comiccon/winston-salem,                   08-03-2018, div.overview h3,
 #Bell County Comic Con,      https://www.bellcountycomiccon.com/guests,                        08-04-2018, ?
-Boston Comic Con,           https://register.growtix.com/people/embed?event_id=7057,          08-10-2018, div.gt-name a,
+#Boston Comic Con,           https://register.growtix.com/people/embed?event_id=7057,          08-10-2018, div.gt-name a,
 Walker Stalker Orlando,     http://walkerstalkercon.com/orlando/guests/,                      08-11-2018, h5.person_name,
 Michigan Comic Con,          https://michigancomiccon.com/,                                   08-17-2018, div.entry-content img,
 Wizard World Chicago,       https://wizardworld.com/comiccon/chicago,                         08-23-2018, div.overview h3,
