@@ -43,7 +43,7 @@ Albuquerque Comic Con,      http://albuquerquecomiccon.com/2015-home/guest-listi
 #Denver Comic Con,           https://denvercomiccon.com/guests/,                               06-15-2018, span.et_portfolio_image img,
 #Supernova Sydney,           http://www.supanova.com.au/events/sydney-2018/guests/,            06-15-2018, figure img,
 #Heroes Con,                 https://www.heroesonline.com/heroescon/guests/,                   06-15-2018, strong a,
-Eternal Con,                http://eternalcon.com/celebrity-guests/,                          06-16-2018, h4 a,
+#Eternal Con,                http://eternalcon.com/celebrity-guests/,                          06-16-2018, h4 a,
 Supernova Perth,            http://www.supanova.com.au/events/perth-2018/guests/,             06-22-2018, figure img,
 Fandemic Sacramento,        https://www.fandemictour.com/sacramento/,                         06-22-2018, div.sqs-block-content h3,
 Ace Comic Con Seattle,      http://www.aceuniverse.com/events/seattle/featured-guests.html/,  06-22-2018, a.product-item-link,
