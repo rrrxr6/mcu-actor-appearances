@@ -48,7 +48,7 @@ Albuquerque Comic Con,      http://albuquerquecomiccon.com/2015-home/guest-listi
 #Fandemic Sacramento,        https://www.fandemictour.com/sacramento/,                         06-22-2018, div.sqs-block-content h3,
 #Ace Comic Con Seattle,      http://www.aceuniverse.com/events/seattle/featured-guests.html/,  06-22-2018, a.product-item-link,
 #Corpus Christi Comic Con,   https://corpuschristicomiccon.com/guests/,                        06-23-2018, span.person-name,
-Fanboy Expo Knoxville,      https://fanboyexpo.com/knoxville/celebrity-guests/,               06-29-2018, p strong,
+#Fanboy Expo Knoxville,      https://fanboyexpo.com/knoxville/celebrity-guests/,               06-29-2018, p strong,
 Shore Leave,                https://www.shore-leave.com/guests/,                              07-06-2018, a.guest-name,
 Montreal Comic Con,         http://www.montrealcomiccon.com/en/our-guests/?show=all,          07-06-2018, p.nom,
 Florida Supercon,           http://floridasupercon.com/all-guests-florida-supercon/,          07-12-2018, img.rt-img-responsive,
