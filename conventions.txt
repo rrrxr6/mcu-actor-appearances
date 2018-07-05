@@ -78,7 +78,7 @@ Cinncinnati Comic Expo,     http://cincinnaticomicexpo.com/autograph-photo-op-pr
 Keystone Comic Con,         http://www.keystonecomiccon.com/Guests/Entertainment-Guests/,     09-14-2018, div.guest-info h3,
 Wizard World Austin,        https://wizardworld.com/comiccon/austin,                          09-21-2018, div.overview h3,
 Megacon Tampa Bay,          https://register.growtix.com/people/embed?event_id=7075,          09-21-2018, div.gt-name a,
-#Edmonton Expo,              https://edmontonexpo.com/guests/media-guests/,                    09-21-2018, div.name,
+Edmonton Expo,              https://www.edmontonexpo.com/en/guests/celebrities.html,          09-21-2018, div.callToActionPara b,
 Baltimore Comic Con,        http://baltimorecomiccon.com/guests/,                             09-28-2018, ul li,
 New York Comic Con,         http://www.newyorkcomiccon.com/Guests/,                           10-04-2018, div.guest-name,
 Wizard World Sacramento,    https://wizardworld.com/comiccon/sacramento,                      10-05-2018, div.overview h3,
