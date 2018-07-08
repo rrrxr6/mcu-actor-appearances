@@ -1,7 +1,5 @@
 from urllib.request import Request, urlopen
-from bs4 import BeautifulSoup
-import collections
-# import sys
+from colorama import init, Fore, Style
 
 
 def dict_compare(d1, d2):
@@ -10,25 +8,29 @@ def dict_compare(d1, d2):
     intersect_keys = d1_keys.intersection(d2_keys)
     added = d1_keys - d2_keys
     removed = d2_keys - d1_keys
-    modified = {o : (d1[o], d2[o]) for o in intersect_keys if d1[o] != d2[o]}
+    modified = {o : (d1[o], d2[o]) for o in intersect_keys if set(d1[o]) != set(d2[o])}
     same = set(o for o in intersect_keys if d1[o] == d2[o])
     return added, removed, modified, same
 
 
 def print_conventions(convention_to_actor):
+    init(convert=True)
     print('---------------------------')
     for convention, actors in convention_to_actor.items():
         print(convention.name + ' (' + convention.date + ')')
         for actor in actors:
-            print('\t' + actor)
+            print('\t', end='')
+            print_actor_color(actor)
+            print()
         print('')
 
 
 def print_actors(actor_to_convention):
+    init(convert=True)
     print('---------------------------')
-    ordered = collections.OrderedDict(sorted(actor_to_convention.items()))
-    for actor, conventions in ordered.items():
-        print(actor)
+    for actor, conventions in actor_to_convention.items():
+        print_actor_color(actor)
+        print()
         for convention in conventions:
             print('\t' + convention.name + ' (' + convention.date + ')')
         print('')
@@ -57,7 +59,7 @@ def get_raw_text(url):
         # e = sys.exc_info()[0]
         print('[ERROR] Failed to retrieve contents from ' + url)
     if response:
-        return response.read().decode(UTF_8)
+        return response.read().decode()
     else:
         return response
 
@@ -73,26 +75,234 @@ def get_html(convention):
     return response
 
 
-def parse_html(html, convention):
-    if not html:
-        return
-    temp_actors = set([])
-    try:
-        print('[INFO] Parsing HTML for ' + convention.name)
-        soup = BeautifulSoup(html, HTML_PARSER)
-    except:
-        print('[ERROR] Failed to parse HTML for ' + convention.name)
-        return ''
-
-    for tag in soup.select(convention.selector):
-        actor_name = get_name_from_tag(tag)
-        if actor_name in MCU_ACTORS and not exception(convention.name, actor_name):
-            temp_actors.add(actor_name.title())
-    return temp_actors
+def print_actor_color(actor):
+    if is_actor_gotten(actor):
+        print(f'{Fore.LIGHTGREEN_EX}'+actor+f'{Style.RESET_ALL}', end='')
+    elif is_actor_super_wanted(actor):
+        print(f'{Fore.LIGHTCYAN_EX}'+actor+f'{Style.RESET_ALL}', end='')
+    elif is_actor_wanted(actor):
+        print(f'{Fore.CYAN}'+actor+f'{Style.RESET_ALL}', end='')
+    else:
+        print(f'{Fore.WHITE}'+actor+f'{Style.RESET_ALL}', end='')
 
 
-UTF_8 = 'utf-8'
-HTML_PARSER = 'html.parser'
-print('[INFO] Downloading actor list')
-MCU_ACTORS = get_raw_text('https://raw.githubusercontent.com/rrrxr6/mcu-actor-appearances/master/actors.txt').split('\n')
-MCU_ACTORS.remove('')
+def get_actor_color(actor):
+    if is_actor_gotten(actor):
+        return 4
+    elif is_actor_super_wanted(actor):
+        return 1
+    elif is_actor_wanted(actor):
+        return 2
+    else:
+        return 3
+
+
+def print_actor_set(actors):
+    print('{', end='')
+    sorted_actors = sorted(actors, key=lambda actor:get_actor_color(actor))
+    for actor in sorted_actors:
+        print_actor_color(actor)
+        print(', ', end='')
+    print('}')
+
+
+def print_removed_actor_set(actors):
+    print('{', end='')
+    for actor in actors:
+        print(f'{Fore.LIGHTRED_EX}' + actor + f'{Style.RESET_ALL}', end='')
+        print(', ', end='')
+    print('}')
+
+
+def print_added_actor_set(actors):
+    print('{', end='')
+    for actor in actors:
+        print(f'{Fore.GREEN}' + actor + f'{Style.RESET_ALL}', end='')
+        print(', ', end='')
+    print('}')
+
+
+def is_actor_wanted(actor):
+    return actor.lower() in ["anthony russo",
+                "benedict wong",
+                "brie larson",
+                "cobie smulders",
+                "danai gurira",
+                "evangeline lilly",
+                "jeremy renner",
+                "joe russo",
+                "kevin feige",
+                "paul rudd",
+                "samuel l. jackson",
+                "samuel jackson"]
+
+
+def is_actor_super_wanted(actor):
+    return actor.lower() in ["anthony mackie",
+                "benedict cumberbatch",
+                "bradley cooper",
+                "chadwick boseman",
+                "chris evans",
+                "chris hemsworth",
+                "chris pratt",
+                "don cheadle",
+                "josh brolin",
+                "karen gillan",
+                "letitia wright",
+                "mark ruffalo",
+                "robert downey jr.",
+                "scarlett johansson",
+                "vin diesel",
+                "zoe saldana"]
+
+
+def is_actor_gotten(actor):
+    return actor.lower() in ["clark gregg",
+                "dave bautista",
+                "elizabeth olsen",
+                "hayley atwell",
+                "paul bettany",
+                "pom klementieff",
+                "sebastian stan",
+                "tom hiddleston",
+                "tom holland"]
+
+
+def get_actors():
+    actors = ["aaron taylor-johnson",
+                "aaron taylor johnson",
+                "andy serkis",
+                "angela bassett",
+                "anthony hopkins",
+                "anthony mackie",
+                "anthony russo",
+                "ben kingsley",
+                "ben mendelsohn",
+                "benedict cumberbatch",
+                "benedict wong",
+                "benicio del toro",
+                "bobby cannavale",
+                "bradley cooper",
+                "brie larson",
+                "cate blanchett",
+                "chadwick boseman",
+                "chiwetel ejiofor",
+                "chris evans",
+                "chris hemsworth",
+                "chris pratt",
+                "chris sullivan",
+                "christopher eccleston",
+                "clancy brown",
+                "clark gregg",
+                "cobie smulders",
+                "corey stoll",
+                "danai gurira",
+                "daniel bruhl",
+                "daniel kaluuya",
+                "dave bautista",
+                "david dastmalchian",
+                "djimon hounsou",
+                "dominic cooper",
+                "don cheadle",
+                "donald glover",
+                "elizabeth debicki",
+                "elizabeth olsen",
+                "emily vancamp",
+                "evangeline lilly",
+                "faran tahir",
+                "florence kasumba",
+                "forest whitaker",
+                "frank grillo",
+                "gemma chan",
+                "glenn close",
+                "guy pearce",
+                "gwyneth paltrow",
+                "hannah john-kamen",
+                "hannah john kamen",
+                "hayley atwell",
+                "hugo weaving",
+                "idris elba",
+                "jacob batalon",
+                "james spader",
+                "jamie alexander",
+                "jeff bridges",
+                "jeff goldblum",
+                "jeremy renner",
+                "joe russo",
+                "john c. reilly",
+                "john kani",
+                "john slattery",
+                "jon favreau",
+                "josh brolin",
+                "jude law",
+                "judy greer",
+                "karen gillan",
+                "karl urban",
+                "kat dennings",
+                "kevin feige",
+                "kurt russel",
+                "laura haddock",
+                "laura harrier",
+                "laurence fishburne",
+                "lee pace",
+                "letitia wright",
+                "linda cardellini",
+                "lupita nyong'o",
+                "mads mikkelsen",
+                "marisa tomei",
+                "mark ruffalo",
+                "martin freeman",
+                "maximilliano hernandez",
+                "michael b. jordan",
+                "michael douglas",
+                "michael keaton",
+                "michael pena",
+                "michael rooker",
+                "michelle pfeiffer",
+                "mickey rourke",
+                "natalie portman",
+                "neal mcdonough",
+                "paul bettany",
+                "paul rudd",
+                "peter dinklage",
+                "peter serafinowicz",
+                "pom klementieff",
+                "rachel house",
+                "rachel mcadams",
+                "ray stevenson",
+                "rene russo",
+                "robert downey jr.",
+                "robert redford",
+                "sam rockwell",
+                "samuel l. jackson",
+                "samuel jackson",
+                "scarlett johansson",
+                "sean gunn",
+                "sebastian stan",
+                "shaun toub",
+                "stanley tucci",
+                "stellan skarsgard",
+                "sterling k. brown",
+                "sylvester stallone",
+                "t.i.",
+                "tip harris",
+                "tadanobu asano",
+                "taika waititi",
+                "tessa thompson",
+                "thomas kretschmann",
+                "tilda swinton",
+                "toby jones",
+                "tom hiddleston",
+                "tom holland",
+                "tom vaughan-lawlor",
+                "tom vaughan lawlor",
+                "tommy lee jones",
+                "tony revolori",
+                "vin diesel",
+                "walter goggins",
+                "william hurt",
+                "winston duke",
+                "zachary levi",
+                "zendaya",
+                "zoe saldana"]
+    return actors
