@@ -55,7 +55,7 @@ Albuquerque Comic Con,      http://albuquerquecomiccon.com/2015-home/guest-listi
 #ConnectiCon,                http://connecticon.org/guests/,                                   07-12-2018, td h3,
 #Wizard World Boise,         https://wizardworld.com/comiccon/boise,                           07-13-2018, div.overview h3,
 #Atlanta Comic Con,          https://atlantacomiccon.com/,                                     07-13-2018, div.entry-content img,
-San Diego Comic Con,        https://www.comic-con.org/cci/autographs,                         07-19-2018, a.name,
+San Diego Comic Con,        https://comiccon2018.sched.com/overview/type/3%3A+Autographs,     07-19-2018, a.name,
 Chapel Con,                 http://chapelcon.com/Guests/CelebGuests.html,                     07-21-2018, a h3,
 London Film and Comic Con,  https://www.londonfilmandcomiccon.com/index.php/allguests,        07-27-2018, h3.aidanews2_title a,
 Raleigh Supercon,           https://raleighsupercon.com/guests/,                               07-27-2018, img.rt-img-responsive,
