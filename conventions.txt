@@ -83,7 +83,7 @@ Edmonton Expo,              https://register.growtix.com/people/embed?event_id=7
 Baltimore Comic Con,        http://baltimorecomiccon.com/guests/media-guests/,                09-28-2018, h3,
 New York Comic Con,         http://www.newyorkcomiccon.com/Guests/,                           10-04-2018, div.guest-name,
 Wizard World Sacramento,    https://wizardworld.com/comiccon/sacramento,                      10-05-2018, div.overview h3,
-#Fan Expo Vancouver,         https://www.fanexpovancouver.com/en/guests/celebrities.html,     10-12-2018, div.gt-name a,
+Fan Expo Vancouver,         https://register.growtix.com/people/embed?event_id=7084,          10-12-2018, div.gt-name a,
 Ace Comic Con Midwest,      http://www.aceuniverse.com/events/midwest/featured-guests.html/,  10-12-2018, a.product-item-link,
 Quebec Comic Con,           http://www.comicconquebec.com/fr/invites/?show=all,               10-14-2018, h2 a,
 #Dallas Fan Days,            http://dallasfandays.com/guests/,                                 10-19-2018, h2.category-guest-title a,
