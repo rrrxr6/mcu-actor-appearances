@@ -6,7 +6,6 @@ angela bassett
 anthony hopkins
 anthony mackie
 anthony russo
-art adams
 ben kingsley
 ben mendelsohn
 benedict cumberbatch
@@ -19,7 +18,6 @@ carrie coon
 cate blanchett
 chadwick boseman
 chiwetel ejiofor
-chris bachalo
 chris evans
 chris hemsworth
 chris pratt
@@ -34,12 +32,10 @@ daniel bruhl
 daniel kaluuya
 dave bautista
 david dastmalchian
-david tennant
 djimon hounsou
 dominic cooper
 don cheadle
 donald glover
-donny cates
 elizabeth debicki
 elizabeth olsen
 emily vancamp
@@ -60,10 +56,8 @@ idris elba
 jacob batalon
 james spader
 jamie alexander
-jason aaron
 jeff bridges
 jeff goldblum
-jeff lemire
 jeremy renner
 joe russo
 john c. reilly
@@ -76,7 +70,6 @@ judy greer
 karen gillan
 karl urban
 kat dennings
-keith giffen
 kevin feige
 kurt russel
 laura haddock
@@ -85,7 +78,6 @@ laurence fishburne
 lee pace
 letitia wright
 linda cardellini
-lou ferrigno
 lupita nyong'o
 mads mikkelsen
 marisa tomei
@@ -122,11 +114,9 @@ scarlett johansson
 sean gunn
 sebastian stan
 shaun toub
-stan lee
 stanley tucci
 stellan skarsgard
 sterling k. brown
-summer glau
 sylvester stallone
 t.i.
 tip harris
@@ -137,8 +127,6 @@ tessa thompson
 thomas kretschmann
 tilda swinton
 toby jones
-tom brevoort
-tom ellis
 tom hiddleston
 tom holland
 tom vaughan-lawlor
