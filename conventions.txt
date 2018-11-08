@@ -1,7 +1,7 @@
 Wizard World New Orleans,   https://wizardworld.com/comiccon/new-orleans,                     01-04-2019, div.overview h3,
 Walker Stalker Portland,    http://walkerstalkercon.com/portland/guests/,                     01-05-2019, h5.person_name,
 Heroes Fan Fest Portland,   http://heroesfanfest.com/portland/guests/,                        01-05-2019, h5.person_name,
-Ace Comic Con Arizona,      http://www.aceuniverse.com/events/seattle/featured-guests.html/,  01-11-2019, a.product-item-link,
+Ace Comic Con Arizona,      https://aceuniverse.com/events/arizona/featured-guests.html/,     01-11-2019, a.product-item-link,
 Albuquerque Comic Con,      http://albuquerquecomiccon.com/2015-home/guest-listing/,          01-18-2019, h2.entry-title a,
 #Planet Comicon,             http://planetcomicon.com/celebrity/,                              02-16-2018, h1,
 Pensacon,                   https://pensacon.com/guests/,                                     02-22-2019, div.guest-name,
