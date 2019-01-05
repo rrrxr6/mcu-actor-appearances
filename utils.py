@@ -81,6 +81,8 @@ def is_actor_of_interest(actor):
         actor_group = sys.argv[1]
         if actor_group == "mcu":
             return actor.lower() in get_mcu_actors()
+        elif actor_group == "office":
+            return actor.lower() in get_office_actors()
     return actor.lower() in get_mcu_actors()
 
 
@@ -315,4 +317,36 @@ def get_mcu_actors():
                 "zachary levi",
                 "zendaya",
                 "zoe saldana"]
+    return actors
+	
+	
+def get_office_actors():
+    actors = ["rainn wilson",
+                "jenna fischer",
+                "steve carell",
+                "john krasinski",
+                "angela kinsey",
+                "ed helms",
+                "mindy kaling",
+                "brian baumgartner",
+                "oscar nunez",
+                "oscar nuñez",
+                "bj novak",
+                "b.j. novak",
+                "leslie david baker",
+                "ellie kemper",
+                "creed bratton",
+                "paul lieberstein",
+                "phyllis smith",
+                "kate flannery",
+                "craig t. robinson",
+                "craig robinson",
+                "melora hardin",
+                "catherine tate",
+                "zach woods",
+                "jake lacy",
+                "david denman",
+                "amy ryan",
+                "clark duke",
+                "rashida jones"]
     return actors
