@@ -1,5 +1,6 @@
 from urllib.request import Request, urlopen
 from colorama import init, Fore, Style
+import sys
 
 
 def dict_compare(d1, d2):
@@ -75,6 +76,14 @@ def get_html(convention):
     return response
 
 
+def is_actor_of_interest(actor):
+    if len(sys.argv) is 2:
+        actor_group = sys.argv[1]
+        if actor_group == "mcu":
+            return actor.lower() in get_mcu_actors()
+    return actor.lower() in get_mcu_actors()
+
+
 def print_actor_color(actor):
     if is_actor_gotten(actor):
         print(f'{Fore.LIGHTGREEN_EX}'+actor+f'{Style.RESET_ALL}', end='')
@@ -101,8 +110,9 @@ def print_actor_set(actors):
     print('{', end='')
     sorted_actors = sorted(actors, key=lambda actor:get_actor_color(actor))
     for actor in sorted_actors:
-        print_actor_color(actor)
-        print(', ', end='')
+        if is_actor_of_interest(actor):
+            print_actor_color(actor)
+            print(', ', end='')
     print('}')
 
 
@@ -123,14 +133,11 @@ def print_added_actor_set(actors):
 
 
 def is_actor_wanted(actor):
-    return actor.lower() in ["anthony russo",
-                "benedict wong",
+    return actor.lower() in ["benedict wong",
                 "brie larson",
                 "cobie smulders",
                 "danai gurira",
-                "evangeline lilly",
                 "jeremy renner",
-                "joe russo",
                 "kevin feige",
                 "paul rudd",
                 "samuel l. jackson",
@@ -138,8 +145,7 @@ def is_actor_wanted(actor):
 
 
 def is_actor_super_wanted(actor):
-    return actor.lower() in ["anthony mackie",
-                "benedict cumberbatch",
+    return actor.lower() in ["benedict cumberbatch",
                 "bradley cooper",
                 "chadwick boseman",
                 "chris evans",
@@ -147,7 +153,6 @@ def is_actor_super_wanted(actor):
                 "chris pratt",
                 "don cheadle",
                 "josh brolin",
-                "karen gillan",
                 "letitia wright",
                 "mark ruffalo",
                 "robert downey jr.",
@@ -157,10 +162,15 @@ def is_actor_super_wanted(actor):
 
 
 def is_actor_gotten(actor):
-    return actor.lower() in ["clark gregg",
+    return actor.lower() in ["anthony mackie",
+                "anthony russo",
+                "clark gregg",
                 "dave bautista",
                 "elizabeth olsen",
+                "evangeline lilly",
                 "hayley atwell",
+                "joe russo",
+                "karen gillan",
                 "paul bettany",
                 "pom klementieff",
                 "sebastian stan",
@@ -168,7 +178,7 @@ def is_actor_gotten(actor):
                 "tom holland"]
 
 
-def get_actors():
+def get_mcu_actors():
     actors = ["aaron taylor-johnson",
                 "aaron taylor johnson",
                 "andy serkis",
