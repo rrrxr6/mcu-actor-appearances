@@ -83,6 +83,8 @@ def is_actor_of_interest(actor):
             return actor.lower() in get_mcu_actors()
         elif actor_group == "office":
             return actor.lower() in get_office_actors()
+        elif actor_group == "potter":
+            return actor.lower() in get_potter_actors()
     return actor.lower() in get_mcu_actors()
 
 
@@ -349,4 +351,49 @@ def get_office_actors():
                 "amy ryan",
                 "clark duke",
                 "rashida jones"]
+    return actors
+
+
+def get_potter_actors():
+    actors = ["daniel radcliffe",
+                "emma watson",
+                "rupert grint",
+                "tom felton",
+                "robbie coltrane",
+                "michael gambon",
+                "maggie smith",
+                "bonnie wright",
+                "ralph fiennes",
+                "matthew lewis",
+                "helena bonham carter",
+                "gary oldman",
+                "warwick davis",
+                "evanna lynch",
+                "david thewlis",
+                "julie walters",
+                "emma thompson",
+                "brendan gleeson",
+                "richard griffiths",
+                "domhnall gleeson",
+                "robert pattinson",
+                "fiona shaw",
+                "jason isaacs",
+                "alfred enoch",
+                "oliver phelps",
+                "james phelps",
+                "james and oliver phelps",
+                "harry melling",
+                "helen mccrory",
+                "john cleese",
+                "natalia tena",
+                "kenneth branagh",
+                "devon murray",
+                "david bradley",
+                "geraldine somerville",
+                "timothy spell",
+                "mark williams",
+                "katie leung",
+                "imelda staunton",
+                "ian hart",
+                "jim broadbent"]
     return actors
