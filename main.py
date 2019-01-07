@@ -49,7 +49,7 @@ if __name__ == '__main__':
     print('[INFO] Downloading actor list')
     MCU_ACTORS = get_raw_text('https://raw.githubusercontent.com/rrrxr6/mcu-actor-appearances/master/actors.txt').split('\n')
     MCU_ACTORS.remove('')
-    # MCU_ACTORS.append('roy thomas')
+    # MCU_ACTORS.append('adam hughes')
 
     all_conventions = []
     if run_with_local_con_data:

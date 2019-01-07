@@ -95,6 +95,8 @@ def print_actor_color(actor):
         print(f'{Fore.LIGHTCYAN_EX}'+actor+f'{Style.RESET_ALL}', end='')
     elif is_actor_wanted(actor):
         print(f'{Fore.CYAN}'+actor+f'{Style.RESET_ALL}', end='')
+    elif actor.lower() in get_mcu_actors():
+        print(f'{Fore.YELLOW}'+actor+f'{Style.RESET_ALL}', end='')
     else:
         print(f'{Fore.WHITE}'+actor+f'{Style.RESET_ALL}', end='')
 
@@ -139,29 +141,29 @@ def print_added_actor_set(actors):
 def is_actor_wanted(actor):
     return actor.lower() in ["benedict wong",
                 "brie larson",
+                "chadwick boseman",
                 "cobie smulders",
                 "danai gurira",
-                "jeremy renner",
+                "don cheadle",
                 "kevin feige",
-                "paul rudd",
+                "letitia wright",
                 "samuel l. jackson",
-                "samuel jackson"]
+                "samuel jackson",
+                "vin diesel"]
 
 
 def is_actor_super_wanted(actor):
     return actor.lower() in ["benedict cumberbatch",
                 "bradley cooper",
-                "chadwick boseman",
                 "chris evans",
                 "chris hemsworth",
                 "chris pratt",
-                "don cheadle",
+                "jeremy renner",
                 "josh brolin",
-                "letitia wright",
                 "mark ruffalo",
+                "paul rudd",
                 "robert downey jr.",
                 "scarlett johansson",
-                "vin diesel",
                 "zoe saldana"]
 
 
@@ -175,6 +177,7 @@ def is_actor_gotten(actor):
                 "hayley atwell",
                 "joe russo",
                 "karen gillan",
+                "neal mcdonough",
                 "paul bettany",
                 "pom klementieff",
                 "sebastian stan",
@@ -183,8 +186,7 @@ def is_actor_gotten(actor):
 
 
 def get_mcu_actors():
-    actors = ["aaron taylor-johnson",
-                "aaron taylor johnson",
+    actors = ["aaron taylor johnson",
                 "andy serkis",
                 "angela bassett",
                 "anthony hopkins",
@@ -302,6 +304,7 @@ def get_mcu_actors():
                 "tip harris",
                 "tadanobu asano",
                 "taika waititi",
+                "terry notary",
                 "tessa thompson",
                 "thomas kretschmann",
                 "tilda swinton",
