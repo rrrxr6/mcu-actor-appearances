@@ -36,7 +36,7 @@ Fan Expo Dallas,            https://register.growtix.com/people/embed?event_id=9
 #Conque,                     http://conque.mx/invitados.php,                                   05-03-2019, div.caption-invited h3,
 #Fantasy Basel,              http://www.fantasybasel.ch/fr/programme/artists-stars/,           05-03-2019, h2.cs-post-title a,
 Ottawa Comic Con,           https://ottawacomiccon.com/artists/,                              05-10-2019, p.nom a,
-#Comic Palooza,              https://www.comicpalooza.com/guests/2019-guests/,                 05-10-2019, div.guestItem h2,
+Comic Palooza,              https://www.comicpalooza.com/guests/2019-guests/,                 05-10-2019, div.guestItem h2,
 Megacon Orlando,            https://register.growtix.com/people/embed?event_id=9707,          05-16-2019, div.gt-name a,
 Motor City Comic Con,       http://www.motorcitycomiccon.com/media-guests/,                   05-17-2019, h3.team-listing_name a,
 Motor City Comic Con,       http://www.motorcitycomiccon.com/comic-guests/,                   05-17-2019, h3.team-listing_name a,
