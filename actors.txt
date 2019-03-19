@@ -11,6 +11,7 @@ adam warren
 adelso corona
 adi granov
 agnes garbowska
+aidan gillen
 al jaffe
 al milgrom
 alan davis
@@ -24,6 +25,7 @@ alex niño
 alex ross
 alex saviuk
 alex sinclair
+alfie allen
 alfred enoch
 alice cooper
 allen bellman
@@ -136,6 +138,7 @@ burt ward
 butch guice
 buzz
 buzz aldrin
+carice van houten
 carl potts
 carl weathers
 carlo barberi
@@ -151,6 +154,7 @@ chad hardin
 chadwick boseman
 chandler riggs
 charisma carpenter
+charles dance
 charles paul wilson
 charles paul wilson iii
 charles soule
@@ -191,6 +195,7 @@ clayton crain
 clayton henry
 cliff chiang
 cobie smulders
+conleth hill
 corey stoll
 cory walker
 craig kyle
@@ -248,6 +253,7 @@ denys cowan
 devin grayson
 devon murray
 dexter vines
+diana rigg
 dirk benedict
 djimon hounsou
 dolph lundgren
@@ -285,6 +291,7 @@ ellie kemper
 elliot s! maggin
 elvira
 emanuella luppachino
+emilia clarke
 emily kinney
 emily vancamp
 emma thompson
@@ -339,6 +346,7 @@ gary gianni
 gary oldman
 gates mcfadden
 gemma chan
+gemma whelan
 gene ha
 gene simmons
 geof darrow
@@ -369,9 +377,11 @@ greg pak
 greg rucka
 guy davis
 guy pearce
+gwendoline christie
 gwyneth paltrow
 hannah john kamen
 hannah john-kamen
+hannah murray
 harry melling
 harvey tolibao
 hayley atwell
@@ -384,12 +394,16 @@ hugh jackman
 hugo weaving
 hulk hogan
 humberto ramos
+iain glen
 ian churchill
 ian hart
 ian mcdiarmid
 idris elba
 imelda staunton
+indira varma
+isaac hempstead
 ivan reis
+iwan rheon
 j. august richards
 j. bone
 j. michael straczynski
@@ -397,9 +411,11 @@ j. scott campbell
 j.g. jones
 j.j. abrams
 j.m. dematteis
+jack gleeson
 jack katz
 jackson "butch" guice
 jackson guice
+jacob anderson
 jacob batalon
 jae lee
 jaime hernandez
@@ -437,6 +453,7 @@ jeremy bastian
 jeremy bulloch
 jeremy haun
 jeremy renner
+jerome flynn
 jerome opeña
 jerry bingham
 jerry ordway
@@ -458,6 +475,7 @@ jimmy palmiotti
 jock
 joe benitez
 joe chiodo
+joe dempsie
 joe eisma
 joe giella
 joe hill
@@ -473,6 +491,7 @@ joe staton
 joëlle jones
 john beatty
 john bolton
+john bradley
 john byrne
 john c. reilly
 john carpenter
@@ -559,8 +578,11 @@ kevin smith
 khoi pham
 kieron dwyer
 kim coates
+kit harington
 klaus janson
 kris silver
+kristian nairn
+kristofer hivju
 kristy swanson
 krysten ritter
 kurt busiek
@@ -591,6 +613,7 @@ leslie baker
 leslie david baker
 letitia wright
 levar burton
+liam cunningham
 lily renee
 linda blair
 linda cardellini
@@ -605,6 +628,7 @@ lupita nyong'o
 mads mikkelsen
 maggie smith
 mairghread scott
+maisie williams
 manu bennett
 marat mychaels
 marc silvestri
@@ -613,6 +637,7 @@ marguerite bennett
 marina sirtis
 marisa tomei
 marjorie liu
+mark addy
 mark bagley
 mark brooks
 mark buckingham
@@ -663,7 +688,9 @@ michael pena
 michael rooker
 michael shaw
 michael zulli
+michelle fairley
 michelle pfeiffer
+michiel huisman
 mickey rourke
 miguel sepulveda
 mike allred
@@ -695,7 +722,9 @@ mitch breitweiser
 monique ganderton
 nancy cartwright
 natalia tena
+natalie dormer
 natalie portman
+nathalie emmanuel
 nathan fillion
 neal adams
 neal mcdonough
@@ -705,6 +734,8 @@ nichelle nichols
 nick bradshaw
 nick derrington
 nick spencer
+nikolaj coster waldau
+nikolaj coster-waldau
 norm breyfogle
 norman reedus
 oliver coipel
@@ -779,6 +810,7 @@ richard comely
 richard dean anderson
 richard donner
 richard griffiths
+richard madden
 richard starkings
 rick leonardi
 rick remender
@@ -808,7 +840,9 @@ ron lim
 ron marz
 ron perlman
 ron wilson
+rory mccann
 rosario dawson
+rose leslie
 roy thomas
 rupert grint
 ryan hurst
@@ -839,6 +873,7 @@ scott snyder
 scott williams
 scott wilson
 sean astin
+sean bean
 sean chen
 sean gunn
 sean patrick flannery
@@ -856,6 +891,7 @@ sigourney weaver
 simon bisley
 simone bianchi
 skottie young
+sophie turner
 spencer wilding
 stacey lee
 stan lee
@@ -867,6 +903,7 @@ stellan skarsgard
 stephanie hans
 stephen amell
 stephen bissette
+stephen dillane
 stephen king
 stephen platt
 sterling k. brown
