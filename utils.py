@@ -139,12 +139,10 @@ def print_added_actor_set(actors):
 
 
 def is_actor_wanted(actor):
-    return actor.lower() in ["benedict wong",
-                "brie larson",
+    return actor.lower() in ["brie larson",
                 "chadwick boseman",
                 "cobie smulders",
                 "danai gurira",
-                "don cheadle",
                 "kevin feige",
                 "letitia wright",
                 "samuel l. jackson",
@@ -155,34 +153,36 @@ def is_actor_wanted(actor):
 def is_actor_super_wanted(actor):
     return actor.lower() in ["benedict cumberbatch",
                 "bradley cooper",
-                "chris evans",
                 "chris hemsworth",
                 "chris pratt",
-                "jeremy renner",
-                "josh brolin",
                 "mark ruffalo",
-                "paul rudd",
                 "robert downey jr.",
-                "scarlett johansson",
-                "zoe saldana"]
+                "scarlett johansson"]
 
 
 def is_actor_gotten(actor):
     return actor.lower() in ["anthony mackie",
                 "anthony russo",
+                "benedict wong",
+                "chris evans",
                 "clark gregg",
                 "dave bautista",
+                "don cheadle",
                 "elizabeth olsen",
                 "evangeline lilly",
                 "hayley atwell",
+                "jeremy renner",
                 "joe russo",
+                "josh brolin",
                 "karen gillan",
                 "neal mcdonough",
                 "paul bettany",
+                "paul rudd",
                 "pom klementieff",
                 "sebastian stan",
                 "tom hiddleston",
-                "tom holland"]
+                "tom holland",
+                "zoe saldana"]
 
 
 def get_mcu_actors():
